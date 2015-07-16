@@ -54,7 +54,7 @@ public class Menu extends Application {
         try {
             super.init();
             Locale.setDefault(Locale.ENGLISH);
-            Configuration config = new Configuration().configure("resources/hibernate.cfg.xml");
+            Configuration config = new Configuration().configure("hibernate.cfg.xml");
             StandardServiceRegistryBuilder ssrb = new StandardServiceRegistryBuilder();
             ssrb.applySettings(config.getProperties());
             StandardServiceRegistry standardServiceRegistry = ssrb.build();
@@ -90,37 +90,37 @@ public class Menu extends Application {
         root.setTop(buttonRow);
 
         Button add = new Button();
-        Image addImage = new Image("resources/Actions-list-add-icon.png");
+        Image addImage = new Image("Actions-list-add-icon.png");
         add.setTooltip(new Tooltip("Create processor, memory, notebook or vendor"));
         add.setGraphic(new ImageView(addImage));
         add.setOnAction(event -> addWindow());
 
         Button warehouse = new Button();
-        Image warehouseImage = new Image("resources/box-1-icon.png");
+        Image warehouseImage = new Image("box-1-icon.png");
         warehouse.setTooltip(new Tooltip("Add notebooks to warehouse"));
         warehouse.setGraphic(new ImageView(warehouseImage));
         warehouse.setOnAction(event -> storeWindow());
 
         Button sale = new Button();
-        Image saleImage = new Image("resources/tag-sale-icon.png");
+        Image saleImage = new Image("tag-sale-icon.png");
         sale.setTooltip(new Tooltip("Sale notebooks"));
         sale.setGraphic(new ImageView(saleImage));
         sale.setOnAction(event -> saleWindow());
 
         Button edit = new Button();
-        Image editImage = new Image("resources/pencil-icon.png");
+        Image editImage = new Image("pencil-icon.png");
         edit.setTooltip(new Tooltip("Edit processor, memory, notebook or vendor"));
         edit.setGraphic(new ImageView(editImage));
         edit.setOnAction(event -> editWindow());
 
         Button delete = new Button();
-        Image deleteImage = new Image("resources/Button-Delete-icon.png");
+        Image deleteImage = new Image("Button-Delete-icon.png");
         delete.setTooltip(new Tooltip("Remove notebooks from warehouse"));
         delete.setGraphic(new ImageView(deleteImage));
         delete.setOnAction(event -> removeWindow());
 
         Button report = new Button();
-        Image reportImage = new Image("resources/document-yellow-icon.png");
+        Image reportImage = new Image("document-yellow-icon.png");
         report.setTooltip(new Tooltip("Diferent reports"));
         report.setGraphic(new ImageView(reportImage));
         report.setOnAction(event -> reportWindow());
@@ -144,7 +144,7 @@ public class Menu extends Application {
         processor.setAlignment(Pos.CENTER_LEFT);
         processor.setGraphicTextGap(40);
         processor.setContentDisplay(ContentDisplay.LEFT);
-        Image processorImage = new Image("resources/cpuz.png");
+        Image processorImage = new Image("cpuz.png");
         processor.setGraphic(new ImageView(processorImage));
         processor.setOnAction(event -> {
             addProcessorWindow();
@@ -156,7 +156,7 @@ public class Menu extends Application {
         memory.setStyle("-fx-font: bold 14pt Georgia");
         memory.setAlignment(Pos.CENTER_LEFT);
         memory.setGraphicTextGap(20);
-        Image memoryImage = new Image("resources/ddr.png");
+        Image memoryImage = new Image("ddr.png");
         memory.setGraphic(new ImageView(memoryImage));
         memory.setOnAction(event -> {
             addMemoryWindow();
@@ -168,7 +168,7 @@ public class Menu extends Application {
         vendor.setStyle("-fx-font: bold 14pt Georgia");
         vendor.setAlignment(Pos.CENTER_LEFT);
         vendor.setGraphicTextGap(25);
-        Image vendorImage = new Image("resources/Handiman.png");
+        Image vendorImage = new Image("Handiman.png");
         vendor.setGraphic(new ImageView(vendorImage));
         vendor.setOnAction(event -> {
             addVendorWindow();
@@ -180,7 +180,7 @@ public class Menu extends Application {
         notebook.setStyle("-fx-font: bold 14pt Georgia");
         notebook.setAlignment(Pos.CENTER_LEFT);
         notebook.setGraphicTextGap(15);
-        Image notebookImage = new Image("resources/laptop.png");
+        Image notebookImage = new Image("laptop.png");
         notebook.setGraphic(new ImageView(notebookImage));
         notebook.setOnAction(event -> {
             addNotebookWindow();
@@ -899,17 +899,17 @@ public class Menu extends Application {
         Scene reportWindowScene = new Scene(vbox);
 
         ToggleGroup group = new ToggleGroup();
-        RadioButton button1 = new RadioButton("Показать все ноутбуки на складе (порционно)");
+        RadioButton button1 = new RadioButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)");
         button1.setToggleGroup(group);
-        RadioButton button2 = new RadioButton("Показать все ноутбуки которых больше \nуказанного количества");
+        RadioButton button2 = new RadioButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ \nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         button2.setToggleGroup(group);
-        RadioButton button3 = new RadioButton("Показать все ноутбуки по указанному \nимени производителя процессора");
+        RadioButton button3 = new RadioButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ \nпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         button3.setToggleGroup(group);
-        RadioButton button4 = new RadioButton("Показать все ноутбуки на складе");
+        RadioButton button4 = new RadioButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
         button4.setToggleGroup(group);
-        RadioButton button5 = new RadioButton("Показать типы ноутбуков, оставшиеся на \nскладе по каждому производителю");
+        RadioButton button5 = new RadioButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ \nпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         button5.setToggleGroup(group);
-        RadioButton button6 = new RadioButton("Получить объем продаж ноутбуков по каждому дню");
+        RadioButton button6 = new RadioButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ");
         button6.setToggleGroup(group);
 
         HBox add = new HBox();
