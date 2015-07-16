@@ -42,38 +42,7 @@
             <version>${log4j.version}</version>
         </dependency>
 
-        <!-- MySql JDBC driver -->
-        <!--        <dependency>
-                    <groupId>mysql</groupId>
-                    <artifactId>mysql-connector-java</artifactId>
-                    <version>${mysql.connector.version}</version>
-                </dependency>-->
-
-        <!--
-        For install Oracle JDBC driver to your local Maven repository, you should exec following commands:
-
-        1) Copy ojdbc6.jar into your user folder /
-
-        2) Set up maven
-        // For Windows
-        set PATH=%PATH%;D:\Java\apache-maven-3.2.5\bin
-        // For Linux
-        export PATH=$PATH:/home/user/install/apache-maven-3.2.1/bin
-
-        3) Set up java
-        set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_25
-
-        4) Check if maven set up
-        mvn -version
-
-        5) Install driver into repo
-        any other steps are not required, only step 5
-        D:\java\apache-maven-3.2.5-bin\apache-maven-3.2.5\bin\mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.5.0 -Dpackaging=jar -Dfile=ojdbc6.jar -DgeneratePom=true
-
-        6) Run maven build
--->
         <!-- ORACLE JDBC driver -->
-
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc14</artifactId>
